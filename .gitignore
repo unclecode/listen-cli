@@ -176,7 +176,8 @@ results/
 
 .gitignore_global
 #*.mp3
-*.txt
+/transcript.txt
+/output.txt
 /*.mp3
 
 config.local.py

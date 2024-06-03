@@ -1,0 +1,9 @@
+colorama
+groq
+keyboard
+numpy
+pyaudio
+pydub
+pytube
+requests
+wave
