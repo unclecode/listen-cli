@@ -12,7 +12,7 @@ With the exciting news of the new Lord of the Rings trilogy coming in December 2
 
 ## 🎥 Video Tutorial
 
-For a detailed explanation, check out the video tutorial here: [YouTube Video](https://www.youtube.com/watch?v=5gL9Ctwmc_g). In this video, I walk you through the process of setting up the transcription server and using both the open-source and Groq methods.
+For a detailed explanation, check out the video tutorial here: [YouTube Video](https://youtu.be/SrgJN7jOxoY). In this video, I walk you through the process of setting up the transcription server and using both the open-source and Groq methods.
 
 ## 🚀 Features
 
