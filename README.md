@@ -21,6 +21,14 @@ For a detailed explanation, check out the video tutorial here: [YouTube Video](h
 - **YouTube URL Mode**: Download and transcribe audio from YouTube videos.
 - **Save YouTube Audio**: Optionally save the downloaded YouTube audio as an MP3 file.
 
+## 🧑‍💻 Launch Your Own Transcription Server
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qYmdj6jYVcffO8IwGFSLjslg16YFQsYG#scrollTo=D7hEAnb2fqwN)
+
+You can also launch your own high-quality transcription server using the open-source `fast-whisper` model. Check out the Jupyter notebook provided in this repository for a step-by-step guide on how to do this.
+
+In the notebook, I demonstrate how to run the server in Google Colab and use ngrok to create a public URL for your server, allowing you to use it in your application.
+
 ## 📦 Installation
 
 Make sure you have the required packages:
@@ -66,12 +74,6 @@ To save the downloaded audio using the YouTube video's title:
 ```
 python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast --save-audio 
 ```
-
-## 🧑‍💻 Launch Your Own Transcription Server
-
-You can also launch your own high-quality transcription server using the open-source `fast-whisper` model. Check out the Jupyter notebook provided in this repository for a step-by-step guide on how to do this.
-
-In the notebook, I demonstrate how to run the server in Google Colab and use ngrok to create a public URL for your server, allowing you to use it in your application.
 
 ### Steps:
 1. **Run the Notebook**: Open the Jupyter notebook and run the cells to launch the server.
