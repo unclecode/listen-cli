@@ -1,6 +1,10 @@
-# 🎙️ YouTube Audio Transcriber
+# 🎤 Super-Fast Whisper Server on Colab
 
-Welcome to the **YouTube Audio Transcriber**! This handy script allows you to transcribe audio from various sources including microphone input, audio files, and YouTube videos. It's powered by FastAPI and Groq for high-quality transcriptions. 🌟
+## Set Up Your Own Super-Fast Whisper Server on Colab! 🚀
+
+In this repo, I show you how to set up your own open source whisper server, especially text models, running on Colab and use it everywhere!
+
+Alsi I made this handy script allows you to transcribe audio from various sources including microphone input, audio files, and YouTube videos. 🌟
 
 ## 🎥 Example: The Hunt for Gollum
 
@@ -8,7 +12,7 @@ With the exciting news of the new Lord of the Rings trilogy coming in December 2
 
 ## 🎥 Video Tutorial
 
-For a detailed explanation, check out the video tutorial here: [YouTube Video](https://www.youtube.com/watch?v=5gL9Ctwmc_g). In this video, we walk you through the process of setting up the transcription server and using both the open-source and Groq methods.
+For a detailed explanation, check out the video tutorial here: [YouTube Video](https://www.youtube.com/watch?v=5gL9Ctwmc_g). In this video, I walk you through the process of setting up the transcription server and using both the open-source and Groq methods.
 
 ## 🚀 Features
 
@@ -16,7 +20,6 @@ For a detailed explanation, check out the video tutorial here: [YouTube Video](h
 - **Audio File Mode**: Transcribe audio files from your local machine.
 - **YouTube URL Mode**: Download and transcribe audio from YouTube videos.
 - **Save YouTube Audio**: Optionally save the downloaded YouTube audio as an MP3 file.
-- **Two Engines**: Choose between `fast` (FastAPI) and `groq` (Groq API) transcription engines.
 
 ## 📦 Installation
 
@@ -47,28 +50,28 @@ python script.py
 ### 📁 Audio File Mode
 
 ```
-python script.py --audio-file path/to/your/audiofile.wav --engine fast > transcript.txt
-python script.py --audio-file path/to/your/audiofile.wav --engine groq > transcript.txt
+python script.py --audio-file path/to/your/audiofile.wav --engine fast 
+python script.py --audio-file path/to/your/audiofile.wav --engine groq 
 ```
 
 ### 📺 YouTube URL Mode
 
 ```
-python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast > transcript.txt
-python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine groq > transcript.txt
+python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast
+python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine groq
 ```
 
 To save the downloaded audio using the YouTube video's title:
 
 ```
-python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast --save-audio > transcript.txt
+python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast --save-audio 
 ```
 
 ## 🧑‍💻 Launch Your Own Transcription Server
 
 You can also launch your own high-quality transcription server using the open-source `fast-whisper` model. Check out the Jupyter notebook provided in this repository for a step-by-step guide on how to do this.
 
-In the notebook, we demonstrate how to run the server in Google Colab and use ngrok to create a public URL for your server, allowing you to use it in your application.
+In the notebook, I demonstrate how to run the server in Google Colab and use ngrok to create a public URL for your server, allowing you to use it in your application.
 
 ### Steps:
 1. **Run the Notebook**: Open the Jupyter notebook and run the cells to launch the server.
@@ -83,7 +86,7 @@ For a faster transcription service, you can use Groq's API. They provide a high-
 
 ## 📣 Contribute
 
-We love contributions! Feel free to fork this project, submit pull requests, and share your improvements. Let's make this tool even better together! 🛠️
+I love contributions! Feel free to fork this project, submit pull requests, and share your improvements. Let's make this tool even better together! 🛠️
 
 ## 🌟 Star the Project
 
