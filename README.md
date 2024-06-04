@@ -21,6 +21,13 @@ For a detailed explanation, check out the video tutorial here: [YouTube Video](h
 - **YouTube URL Mode**: Download and transcribe audio from YouTube videos.
 - **Save YouTube Audio**: Optionally save the downloaded YouTube audio as an MP3 file.
 
+## 🎤 Speech-to-Text Engine
+
+You have two options for the speech-to-text engine:
+
+- **Groq**: A high-speed transcription service. You need to create a free account to use this service. Set the API token in your environment variables and call it "GROQ_API_TOKEN". Try it here https://console.groq.com/ 🚀
+- **Fast-Whisper**: An open-source model that you can run on your own server. I provide a Jupyter notebook that shows you how to set up the server on Google Colab. 🌟
+
 ## 🧑‍💻 Launch Your Own Transcription Server
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qYmdj6jYVcffO8IwGFSLjslg16YFQsYG#scrollTo=D7hEAnb2fqwN)
