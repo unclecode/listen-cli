@@ -1,10 +1,10 @@
-# 🎤 Super-Fast Whisper Server on Colab
+# 🎤 Listen-Cli: Super-Fast Whisper Server on Colab
 
 ## Set Up Your Own Super-Fast Whisper Server on Colab! 🚀
 
 In this repo, I show you how to set up your own open source whisper server, especially text models, running on Colab and use it everywhere!
 
-Alsi I made this handy script allows you to transcribe audio from various sources including microphone input, audio files, and YouTube videos. 🌟
+Also, I made this handy script that allows you to transcribe audio from various sources including microphone input, audio files, and YouTube videos. 🌟
 
 ## 🎥 Example: The Hunt for Gollum
 
@@ -43,7 +43,49 @@ You may also need `ffmpeg` for audio conversions:
 sudo apt-get install ffmpeg
 ```
 
+## 📦 CLI Installation
+
+You can install the `listen-cli` library directly from the repository using pip:
+
+```
+pip install git+https://github.com/unclecode/listen-cli.git
+```
+
 ## 🔧 Usage
+
+### CLI Usage
+
+After installing, you can use the `listen` command in your terminal:
+
+### 🎤 Microphone Mode
+
+```
+listen
+```
+
+### 📁 Audio File Mode
+
+```
+listen --audio-file path/to/your/audiofile.wav --engine fast
+listen --audio-file path/to/your/audiofile.wav --engine groq
+```
+
+### 📺 YouTube URL Mode
+
+```
+listen --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast
+listen --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine groq
+```
+
+To save the downloaded audio using the YouTube video's title:
+
+```
+listen --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast --save-audio
+```
+
+## 📜 Script Usage
+
+You can still use the script directly:
 
 ```
 python script.py --help
@@ -58,8 +100,8 @@ python script.py
 ### 📁 Audio File Mode
 
 ```
-python script.py --audio-file path/to/your/audiofile.wav --engine fast 
-python script.py --audio-file path/to/your/audiofile.wav --engine groq 
+python script.py --audio-file path/to/your/audiofile.wav --engine fast
+python script.py --audio-file path/to/your/audiofile.wav --engine groq
 ```
 
 ### 📺 YouTube URL Mode
@@ -72,10 +114,11 @@ python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --e
 To save the downloaded audio using the YouTube video's title:
 
 ```
-python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast --save-audio 
+python script.py --youtube-url "https://www.youtube.com/watch?v=5gL9Ctwmc_g" --engine fast --save-audio
 ```
 
 ### Steps:
+
 1. **Run the Notebook**: Open the Jupyter notebook and run the cells to launch the server.
 2. **Set Up ngrok**: Use ngrok to create a public URL for your server.
 3. **Use the URL**: Integrate the URL into your application to access the transcription service.
