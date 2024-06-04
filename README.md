@@ -1,4 +1,4 @@
-# 🎤 Listen-Cli: Super-Fast Whisper Server on Colab
+# 🎤 Listen-Cli: Super-Fast Whisper Server on Colab or Groq
 
 ## Set Up Your Own Super-Fast Whisper Server on Colab! 🚀
 
