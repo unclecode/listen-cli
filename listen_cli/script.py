@@ -13,7 +13,7 @@ import requests
 import tempfile
 from pydub import AudioSegment
 from datetime import timedelta
-from config import FAST_API_URL
+from listen_cli.config import FAST_API_URL
 # Initialize colorama
 init()
 
@@ -160,7 +160,20 @@ def process_single_transcription(engine, audio_bytes, output_file):
             print(Fore.CYAN + "Transcription result: " + transcription + Style.RESET_ALL)
 
 # Main function
-def main(args):
+def main():
+    parser = argparse.ArgumentParser(description="Transcribe audio from microphone, file, or YouTube URL using FastAPI server or Groq API.")
+    parser.add_argument('--output-file', type=str, default="output.txt", help="Output file to save transcriptions.")
+    parser.add_argument('--audio-file', type=str, help="Path to the audio file to transcribe.")
+    parser.add_argument('--youtube-url', type=str, help="YouTube URL to download and transcribe audio.")
+    parser.add_argument('--save-audio', action='store_true', default=True, help="Save the downloaded YouTube audio.")
+    parser.add_argument('--engine', type=str, choices=['fast', 'groq'], default='groq', help="Transcription engine to use ('fast' or 'groq').")
+    args = parser.parse_args()
+
+    # Debugging setup
+    if os.getenv('DEBUG') == '1':
+        args.engine = 'fast'  # or 'groq'
+        # args.engine = 'groq'  # or 'groq'
+            
     audio_bytes = None
     is_microphone = False
 
@@ -191,20 +204,7 @@ def main(args):
         process_single_transcription(args.engine, audio_bytes, args.output_file if not is_microphone else None)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Transcribe audio from microphone, file, or YouTube URL using FastAPI server or Groq API.")
-    parser.add_argument('--output-file', type=str, default="output.txt", help="Output file to save transcriptions.")
-    parser.add_argument('--audio-file', type=str, help="Path to the audio file to transcribe.")
-    parser.add_argument('--youtube-url', type=str, help="YouTube URL to download and transcribe audio.")
-    parser.add_argument('--save-audio', action='store_true', default=True, help="Save the downloaded YouTube audio.")
-    parser.add_argument('--engine', type=str, choices=['fast', 'groq'], default='fast', help="Transcription engine to use ('fast' or 'groq').")
-    args = parser.parse_args()
-
-    # Debugging setup
-    if os.getenv('DEBUG') == '1':
-        args.engine = 'fast'  # or 'groq'
-        # args.engine = 'groq'  # or 'groq'
-        
-    main(args)
+    main()
 
 
 # Examples of command line usafe
